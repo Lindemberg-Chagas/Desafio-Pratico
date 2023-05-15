@@ -1,4 +1,4 @@
-name: CI_
+name: CI_teste
 on:
   push:
     branches: [ "release" ]
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  CI:
+  CI_teste:
    runs-on: ubuntu-latest   
    
    steps:
@@ -26,7 +26,7 @@ jobs:
       - name: Run the tests
         run: npm run test -- --coverage
         env:
-          CI: true
+          CI_teste: true
   
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
