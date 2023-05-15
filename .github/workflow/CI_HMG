@@ -1,4 +1,4 @@
-name: CI_HMG
+name: CI_
 on:
   push:
     branches: [ "release" ]
