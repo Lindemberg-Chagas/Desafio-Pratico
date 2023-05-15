@@ -2,16 +2,17 @@ name: CI
 
 on:
   push:
-    - release
-
+   [ "release" ]
+  
   workflow_dispatch:
 
 jobs:
   CI:
-   runs-on: ubuntu-latest
-
-    steps:
-
+   runs-on: ubuntu-latest   
+   
+   steps:
+     
+     
       - name: Checkout repository
         uses: actions/checkout@v3
 
