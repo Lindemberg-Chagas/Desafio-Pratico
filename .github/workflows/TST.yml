@@ -52,9 +52,9 @@ jobs:
             StrictHostKeyChecking no
           END
         env:
-          SSH_USER: ${{ secrets.SSH_USER }}
-          SSH_KEY: ${{ secrets.SSH_KEY }}
-          SSH_HOST: ${{ secrets.SSH_HOST }}     
+          SSH_USER: ${{ secrets.DES_SSH_USER }}
+          SSH_KEY: ${{ secrets.DES_SSH_KEY }}
+          SSH_HOST: ${{ secrets.DES_SSH_HOST }}     
     
      
       - name: Checkout repository
