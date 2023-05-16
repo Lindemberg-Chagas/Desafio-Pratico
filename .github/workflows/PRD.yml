@@ -35,7 +35,7 @@ jobs:
 
   CD:
    runs-on: ubuntu-latest
-   environment: Teste
+   environment: Producao
    needs: CI
    
    steps:
@@ -72,6 +72,7 @@ jobs:
         run: npm run test -- --coverage
         env:
           CI: true
+          
       - name: Build the application
         run: npm run build
 
