@@ -77,7 +77,7 @@ jobs:
           ssh google-cloud 'sudo systemctl stop tst-react'
           ssh google-cloud 'sudo rm -rf /app/tst-react'
           scp -r build google-cloud:/home/desafio/tst-react
-          ssh google-cloud 'sudo mkdir /app'
+          ssh google-cloud 'sudo mkdir /app/'
           ssh google-cloud 'sudo mv /home/desafio/tst-react /app/tst-react'
           ssh google-cloud 'sudo systemctl start tst-react'  
   
