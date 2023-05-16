@@ -1,7 +1,8 @@
 name: PROJETO
 on:
   push:
-    branches: [ "release" ]
+    branches:
+     - release
     
 jobs:
   CI:
