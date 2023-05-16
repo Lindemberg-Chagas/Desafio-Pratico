@@ -72,5 +72,15 @@ jobs:
         run: npm run test -- --coverage
         env:
           CI: true
+      - name: Build the application
+        run: npm run build
+
+      - name: Deploy the application
+        run: |
+          ssh google-cloud 'sudo systemctl stop prd-react'
+          ssh google-cloud 'sudo rm -rf /app/prd-react'
+          scp -r build google-cloud:/home/desafio/prd-react
+          ssh google-cloud 'sudo mv /home/desafio/prd-react /app/prd-react'
+          ssh google-cloud 'sudo systemctl start prd-react'  
   
 
